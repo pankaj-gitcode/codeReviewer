@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 
-
+import Markdown from 'react-markdown'
+import rehypeHighlight from 'rehype-highlight'
+import remarkGfm from 'remark-gfm'
 import { Editor } from '@monaco-editor/react'
 import axios from 'axios'
 
@@ -23,7 +25,7 @@ export default function Engine ()  {
             {/* ---------- LHS ---------- */}
 
                     {/* ----- CONTAINER ----- */}
-                <div className='h-[100vh] '>
+                <div className='h-[100vh] border-8 border-[#fff]'>
                     <Editor
                         height='95%'
                         defaultValue={prompt}
@@ -44,8 +46,15 @@ export default function Engine ()  {
 
             {/* ---------- RHS ---------- */}
                     {/* ----- CONTAINER ----- */}
-                <div className='h-[100vh] bg-black text-white overflow-auto'>
-                    <p>{output}</p>
+                <div className='h-[100vh] bg-black text-white 
+                overflow-auto border-4 border-[#fff] mx-[12vw]'>
+                    
+                    <Markdown 
+                        remarkPlugins={[remarkGfm]}
+                        rehypePlugins={[rehypeHighlight]}
+                    >
+                    {output}
+                    </Markdown>
                 </div>
 
         </div>
