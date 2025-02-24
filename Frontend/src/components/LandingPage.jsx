@@ -19,7 +19,7 @@ export default function LandingPage() {
             <h1 className='text-[#D2D8E4] font-[font1] text-[3vw] sm:text-xl mt-5'>
             Your smart coding companion—deep AI-driven reviews for better, optimized, and cleaner code-all in one click.
             </h1>
-            <button className='text-white text-sm sm:text-xl bg-gradient-to-r
+            <button onClick ={()=>navigate('/engine')} className='text-white text-sm sm:text-xl bg-gradient-to-r
              from-[#3E92FE] to-[#86b8f9] mt-10 py-2 px-10 rounded-2xl mb-6'>Get Started</button>
         </div>
 
