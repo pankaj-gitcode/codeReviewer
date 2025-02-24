@@ -47,7 +47,7 @@ export default function Engine ()  {
             {/* ---------- RHS ---------- */}
                     {/* ----- CONTAINER ----- */}
                 <div className='h-[100vh] bg-black text-white 
-                overflow-auto border-4 border-[#fff] mx-[12vw]'>
+                overflow-auto border-4 border-[#fff] text-sm p-2'>
                     
                     <Markdown 
                         remarkPlugins={[remarkGfm]}
